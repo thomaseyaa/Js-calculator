@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JS calculator</title>
+  <link rel="icon" type="image/png" href="img/calculator.png"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous"/>
+  <style>
+    .error,
+    .results {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-6 mt-5">
+        <h1 class="text-center mb-4">Js calculator</h1>
+
+        <form>
+          <div class="mb-3">
+            <label for="number2" class="form-label">Number 1</label>
+            <input type="text" class="form-control" id="number1">
+          </div>
+
+          <div class="mb-3">
+            <select class="form-select" id="operation">
+              <option selected disabled value="">Select an operation...</option>
+              <option value="+">Addition</option>
+              <option value="*">Multiplication</option>
+              <option value="-">Substraction</option>
+              <option value="/">Division</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="number2" class="form-label">Number 2</label>
+            <input type="text" class="form-control" id="number2">
+          </div>
+          <button type="submit" class="btn btn-info">Calculate</button>
+          <a href="#" id="reset" class="btn btn-secondary">Reset</a>
+        </form>
+
+        <div class="card p-3 text-center text-white bg-danger error mt-5">
+          <div class="card-body">
+            <p class="card-text" id="error"></p>
+          </div>
+        </div>
+
+        <div class="card text-center text-white bg-success results mt-5">
+          <div class="card-body">
+            <p class="card-text">Résultat : <span id="results"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script defer src="js/app.js"></script>
+</html>
